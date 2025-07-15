@@ -1,332 +1,339 @@
 <!DOCTYPE html><html lang="en" ><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Official Launch | E-Service Sheet Nandurbar Police </title><link rel="shortcut icon" type="image/png" href=""><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"><style>body,html{height:100%;margin:0;overflow:hidden}.logo{width:30%}a{color:#fff;font-weight:900}hr{margin:5px}h3{font-size:50px;color:#fff;margin:10px 10px 5px}p{font-weight:800;color: #fff;}canvas{border:1px solid silver;background:#fff}.method{color:grey}.bgimg{z-index:99;height:100%;background-position:center;background-size:cover;position:relative;color:#000;font-family:"Courier New",Courier,monospace;font-size:25px}.middle{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);text-align:center}hr{margin:auto;width:40%;background-color: #fff;}#canvas{position:fixed;top:0;bottom:0;left:0;right:0;background:0 0}#countdown{position:absolute;bottom:0;left:0;right:0;color:#eee;display:flex;opacity:.96;justify-content:center;margin:0 auto}#countdown .countdown-section{padding:20px 40px;border-right:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.9)}#countdown .countdown-section:hover{box-shadow:0 0 12px 0 rgba(10,10,10,.9)}#countdown .countdown-section:last-child{border-right:0}#countdown .countdown-section .h1{opacity:.9;font-size:2em}#countdown .countdown-section .text-center{color:#ddd;opacity:1}@media(max-width:1000px){#countdown .countdown-section{padding:10px}#countdown .countdown-section .h1{font-size:2em}.bgimg{font-size:18px}.middle{top:45%;}.logo{transform:scale(2);}h3,p,a{text-shadow: 0 0 20px rgba(250,250,250,.9);}}
 
-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #111;
-}
-
-.logo-container {
-    background: white;
-    padding: 4px;
-    border-radius: 100%;
-    display: inline-block;
-    width: 160px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.logo {
-    max-width: 100%;
-    height: 120px;
-    width: 130px;
-    margin-top: 0 !important;
-}
-</style><body>
-<!--welcom audio-->
-<!--
- <script>
-  function play(){
-       var audio = document.getElementById("audio");
-       audio.play();
-                 }
-   </script>
--->
-
-<!--<audio id="audio" src="mhpfinal.mp3" ></audio>-->
-
-
-	<canvas id=c></canvas>
-<div class="bgimg">  
-    <div class="middle"><div class="logo-container"><img src="/logo.png" class="logo" title="mssc"></div><h3 title="mssc" style="color: #C69E51;"><strong>E-Service Sheet Nandurbar Police</strong></h3><hr><br><h4 style="color: #fff; font-size: 40px;">Official Launch</h4><br>
-<div style="display: flex; justify-content: center; gap: 20px;">
-    <a href="https://nandurbar.mahapolice.gov.in/eservice/admin/login" class="btn btn-lg" role="button" aria-pressed="true" style="background:#2196F3;color: #fff; padding: 10px 40px;" target="_blank">ADMIN LOGIN</a>
-    <a href="https://nandurbar.mahapolice.gov.in/eservice/officer" class="btn btn-lg" role="button" aria-pressed="true" style="background:#ff5722;color: #fff; padding: 10px 40px;" target="_blank">USER LOGIN</a>
-</div>
-</div>
-		
-  
-		
-		
-	<!-- <div id="countdown"><div class="countdown-section"><span class="h1 days"></span><div class="text-center">DAYS</div></div><div class="countdown-section"><span class="h1 hours"></span><div class="text-center">HRS</div></div><div class="countdown-section"><span class="h1 minutes"></span><div class="text-center">MINS</div></div><div class="countdown-section"><span class="h1 seconds"></span><div class="text-center">SECS</div></div></div><br> -->
-</div><canvas id="canvas"></canvas><br>
-<script>function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),r=Math.floor(n/1e3/60%60),a=Math.floor(n/36e5%24),i=Math.floor(n/864e5);return{total:n,days:i,hours:a,minutes:r,seconds:t}}function initializeClock(e,n){function t(){var e=getTimeRemaining(n);a.innerHTML=e.days,i.innerHTML=("0"+e.hours).slice(-2),o.innerHTML=("0"+e.minutes).slice(-2),l.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}var r=document.getElementById(e),a=r.querySelector(".days"),i=r.querySelector(".hours"),o=r.querySelector(".minutes"),l=r.querySelector(".seconds");t();var s=setInterval(t,1e3)}var deadline="January 2 2018 02:00:00 UTC";initializeClock("countdown",deadline);</script><script>var ballons_left=25,ballons_right=25;colors=["#f44336","#e91e63","#9c27b0","#673ab7","#3f51b5","#2196f3","#03a9f4","#00bcd4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFEB3B","#FFC107","#FF9800","#FF5722"],colors2=["#f44336","#e91e63","#9c27b0","#673ab7","#3f51b5","#2196f3","#03a9f4","#00bcd4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFEB3B","#FFC107","#FF9800","#FF5722"];function handleClick(cb){debug=cb.checked;}var mouse={x:0,y:0};canvas.addEventListener("mousemove",function(n){mouse.x=n.pageX-this.offsetLeft,mouse.y=n.pageY-this.offsetTop},!1);var utils={randomInt:function(n,o){return Math.floor(n+Math.random()*(o-n+1))},randomRange:function(n,o){return n+Math.random()*(o-n+1)}};function randomForce(s){this.goal=0,this.value=s,this.sens=null,this.calculerLeSens=function(){this.value<this.goal&&(this.sens="+"),this.value>this.goal&&(this.sens="-")},this.display=function(s,t,i){ctx.fillStyle="silver",ctx.textAlign="left",ctx.font="20px arial"},this.update=function(){null===this.sens?this.calculerLeSens():"+"===this.sens?(this.value+=.005,this.value>this.goal&&(this.goal=utils.randomRange(-10,10)/50,this.sens=null)):"-"===this.sens&&(this.value-=.005,this.value<this.goal&&(this.goal=utils.randomRange(-10,10)/50,this.sens=null))}}function distance(t,i){var n=i.x-t.x,s=i.y-t.y;return Math.sqrt(n*n+s*s)}function point(t,i){this.x=t,this.y=i,this.oldx=t,this.oldy=i}function verlet(t,i){this.x=t,this.y=i,this.points=[],this.sticks=[],this.bounce=.9,this.gravity=.9,this.wind=3,this.antig=!1,this.friction=.95,this.addPoint=function(t,i){this.points.push(new point(t+this.x,i+this.y))},this.renderPoints=function(){for(var t=0;t<this.points.length;t++){var i=this.points[t];ctx.beginPath(),ctx.arc(i.x,i.y,3,0,2*Math.PI),ctx.fill(),ctx.stroke()}},this.renderSticks=function(){ctx.beginPath();for(var t=0;t<this.sticks.length;t++){var i=this.sticks[t];ctx.moveTo(i.p0.x,i.p0.y),ctx.lineTo(i.p1.x,i.p1.y)}ctx.stroke()},this.updatePoints=function(){for(var t=0;t<this.points.length;t++){var i=this.points[t],n=(i.x-i.oldx)*this.friction;vy=(i.y-i.oldy)*this.friction,i.pinned||(i.oldx=i.x,i.oldy=i.y,i.x+=n,i.y+=vy,i.antig?i.y-=this.gravity*i.antig[1]:i.y+=this.gravity,i.x+=wind.value,n=(i.x-i.oldx)*this.friction,vy=(i.y-i.oldy)*this.friction,i.x>W?(i.x=W,i.oldx=i.x+n*this.bounce):i.x<0&&(i.x=0),i.y>H?i.y=H:i.y<0&&(i.y=0))}},this.updateSticks=function(){for(var t=0;t<this.sticks.length;t++){var i=this.sticks[t],n=i.p1.x-i.p0.x,s=i.p1.y-i.p0.y,h=Math.sqrt(n*n+s*s),o=i.length-h,c=o/h/1.5,e=n*c,a=s*c;i.p0.pinned||(i.p0.x-=e,i.p0.y-=a),i.p1.pinned||(i.p1.x+=e,i.p1.y+=a)}}}wind=new randomForce(.1),canvas=document.getElementById("canvas");var ctx=canvas.getContext("2d");W=canvas.width=window.screen.width,H=canvas.height=window.screen.height;verlet.prototype.calcul=function(){this.updatePoints();for(var t=0;12>t;t++)this.updateSticks()},verlet.prototype.draw=function(){this.renderSticks(),this.renderPoints()};function corde(x,y,[longueur,ecart]) {this.color=colors[utils.randomInt(0,colors.length-1)];this.body=new verlet(x, y);this.points=[];this.width=5;this.longueur=longueur;for(var i=0;i<longueur;i++){this.body.addPoint(0,i*ecart);}this.body.points[0].pinned=true;for(l=0;l<longueur-1;l++) {this.body.sticks.push({p0:this.body.points[0 + l],p1: this.body.points[1+l],length:distance(this.body.points[0 + l], this.body.points[1+l])});}this.body.points[this.body.points.length - 1].antig=[true,this.longueur];this.getPoints=function(){this.points=this.body.points;};}var debug=false;corde.prototype.draw=function(){for(this.body.calcul(),this.getPoints(),ctx.lineWidth=1,ctx.strokeStyle="silver",ctx.fillStyle=this.color,ctx.lineCap="round",ctx.beginPath(),ctx.moveTo(this.points[0].x,this.points[0].y),s=1;s<this.longueur-2;s++){var t=(this.points[s].x+this.points[s+1].x)/2,i=(this.points[s].y+this.points[s+1].y)/2;ctx.quadraticCurveTo(this.points[s].x,this.points[s].y,t,i)}if(ctx.quadraticCurveTo(this.points[s].x,this.points[s].y,this.points[s+1].x,this.points[s+1].y),ctx.stroke(),ctx.globalAlpha=.9,ctx.beginPath(),ctx.arc(this.points[this.points.length-1].x,this.points[this.points.length-1].y,30,0,2*Math.PI),ctx.fill(),ctx.closePath(),ctx.globalAlpha=1,debug){for(ctx.lineWidth=1,ctx.strokeStyle="#222",ctx.beginPath(),ctx.moveTo(this.points[0].x,this.points[0].y),s=1;s<this.longueur-1;s++)ctx.lineTo(this.points[s].x,this.points[s].y);ctx.lineTo(this.points[s].x,this.points[s].y),ctx.stroke(),ctx.fillStyle="silver";for(var s=0;s<this.longueur;s++)ctx.beginPath(),ctx.arc(this.points[s].x,this.points[s].y,1,0,2*Math.PI),ctx.fill(),ctx.closePath();ctx.fillStyle="#222"}},stockCorde=[];function addBalloon(){stockCorde.push(new corde(W-150,H-50,[utils.randomInt(3,20),20]))}function deleteBalloon(){stockCorde.length>1&&stockCorde.splice(0,1)}function release(){for(var o=0;o<stockCorde.length;o++)stockCorde[o].body.points[0].pinned=!1}function followMouse(){followAll=followAll?!1:!0}function update(){ctx.clearRect(0,0,W,H);for(var o=0;o<stockCorde.length;o++){stockCorde[o].draw();for(var t=stockCorde[o],s=o+1;s<stockCorde.length;s++){var d=stockCorde[s];collision(t,d)}}if(mouse.x)if(followAll)for(var n=0;n<stockCorde.length;n++)stockCorde[n].body.points[0].x=mouse.x,stockCorde[n].body.points[0].y=mouse.y;else stockCorde[0].body.points[0].x=mouse.x,stockCorde[0].body.points[0].y=mouse.y;wind.update(),wind.display(30,30,"wind"),requestAnimationFrame(update)}for(var i=0;i<ballons_left;i++)stockCorde.push(new corde(W-150,H-50,[utils.randomInt(5,20),20]));for(var i=0;i<ballons_right;i++)stockCorde.push(new corde(150,H-50,[utils.randomInt(5,20),20]));var followAll=!1;this.collision=function(o,s){var d,n=o.body.points[o.body.points.length-1].x-s.body.points[s.body.points.length-1].x;dy=o.body.points[o.body.points.length-1].y-s.body.points[s.body.points.length-1].y,d=Math.sqrt(n*n+dy*dy),o.radius=30,s.radius=30,l=o.radius+s.radius,d<l&&(f=(1-d/l)*this.radius*2,t=Math.atan2(dy,n),s.body.points[s.body.points.length-1].oldx+=1*Math.cos(t),s.body.points[s.body.points.length-1].oldy+=1*Math.sin(t))},update();
-
-
-// 
-
-var gl = c.getContext( 'webgl', { preserveDrawingBuffer: true } )
-	,	w = c.width = window.innerWidth
-	,	h = c.height = window.innerHeight
-
-	,	webgl = {}
-	,	opts = {
-		projectileAlpha: .8,
-		projectileLineWidth: 1.3,
-		fireworkAngleSpan: .5,
-		baseFireworkVel: 3,
-		addedFireworkVel: 3,
-		gravity: .03,
-		lowVelBoundary: -.2,
-		xFriction: .995,
-		baseShardVel: 1,
-		addedShardVel: .2,
-		fireworks: 1000,
-		baseShardsParFirework: 10,
-		addedShardsParFirework: 10,
-		shardFireworkVelMultiplier: .3,
-		initHueMultiplier: 1/360,
-		runHueAdder: .1/360
-	}
-
-webgl.vertexShaderSource = `
-uniform int u_mode;
-uniform vec2 u_res;
-attribute vec4 a_data;
-varying vec4 v_color;
-
-vec3 h2rgb( float h ){
-	return clamp( abs( mod( h * 6. + vec3( 0, 4, 2 ), 6. ) - 3. ) -1., 0., 1. );
-}
-void clear(){
-	gl_Position = vec4( a_data.xy, 0, 1 );
-	v_color = vec4( 0, 0, 0, a_data.w );
-}
-void draw(){
-	gl_Position = vec4( vec2( 1, -1 ) * ( ( a_data.xy / u_res ) * 2. - 1. ), 0, 1 );
-	v_color = vec4( h2rgb( a_data.z ), a_data.w );
-}
-void main(){
-	if( u_mode == 0 )
-		draw();
-	else
-		clear();
-}
-`;
-webgl.fragmentShaderSource = `
-precision mediump float;
-varying vec4 v_color;
-
-void main(){
-	gl_FragColor = v_color;
-}
-`;
-
-webgl.vertexShader = gl.createShader( gl.VERTEX_SHADER );
-gl.shaderSource( webgl.vertexShader, webgl.vertexShaderSource );
-gl.compileShader( webgl.vertexShader );
-
-webgl.fragmentShader = gl.createShader( gl.FRAGMENT_SHADER );
-gl.shaderSource( webgl.fragmentShader, webgl.fragmentShaderSource );
-gl.compileShader( webgl.fragmentShader );
-
-webgl.shaderProgram = gl.createProgram();
-gl.attachShader( webgl.shaderProgram, webgl.vertexShader );
-gl.attachShader( webgl.shaderProgram, webgl.fragmentShader );
-
-gl.linkProgram( webgl.shaderProgram );
-gl.useProgram( webgl.shaderProgram );
-
-webgl.dataAttribLoc = gl.getAttribLocation( webgl.shaderProgram, 'a_data' );
-webgl.dataBuffer = gl.createBuffer();
-
-gl.enableVertexAttribArray( webgl.dataAttribLoc );
-gl.bindBuffer( gl.ARRAY_BUFFER, webgl.dataBuffer );
-gl.vertexAttribPointer( webgl.dataAttribLoc, 4, gl.FLOAT, false, 0, 0 );
-
-webgl.resUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_res' );
-webgl.modeUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_mode' );
-
-gl.viewport( 0, 0, w, h );
-gl.uniform2f( webgl.resUniformLoc, w, h );
-
-gl.blendFunc( gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA );
-gl.enable( gl.BLEND );
-
-gl.lineWidth( opts.projectileLineWidth );
-
-webgl.data = [];
-
-webgl.clear = function(){
-	
-	gl.uniform1i( webgl.modeUniformLoc, 1 );
-	var a = .1;
-	webgl.data = [
-		-1, -1, 0, a,
-		 1, -1, 0, a,
-		-1,  1, 0, a,
-		-1,  1, 0, a,
-		 1, -1, 0, a,
-		 1,  1, 0, a
-	];
-	webgl.draw( gl.TRIANGLES );
-	gl.uniform1i( webgl.modeUniformLoc, 0 );
-	webgl.data.length = 0;
-}
-webgl.draw = function( glType ){
-	
-	gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( webgl.data ), gl.STATIC_DRAW );
-	gl.drawArrays( glType, 0, webgl.data.length / 4 );
-}
-
-var	fireworks = []
-	,	tick = 0
-	,	sins = []
-	,	coss = []
-	,	maxShardsParFirework = opts.baseShardsParFirework + opts.addedShardsParFirework
-	,	tau = 6.283185307179586476925286766559;
-
-for( var i = 0; i < maxShardsParFirework; ++i ){
-	sins[ i ] = Math.sin( tau * i / maxShardsParFirework );
-	coss[ i ] = Math.cos( tau * i / maxShardsParFirework );
-}
-
-function Firework(){
-	this.reset();
-	this.shards = [];
-	for( var i = 0; i < maxShardsParFirework; ++i )
-		this.shards.push( new Shard( this ) );
-}
-Firework.prototype.reset = function(){
-	
-	var angle = -Math.PI / 2 + ( Math.random() - .5 )* opts.fireworkAngleSpan
-		,	vel = opts.baseFireworkVel + opts.addedFireworkVel * Math.random();
-	
-	this.mode = 0;
-	this.vx = vel * Math.cos( angle );
-	this.vy = vel * Math.sin( angle );
-	
-	this.x = Math.random() * w;
-	this.y = h;
-	
-	this.hue = tick * opts.initHueMultiplier;
-	
-}
-Firework.prototype.step = function(){
-	
-	if( this.mode === 0 ){
-		
-		var ph = this.hue
-			,	px = this.x
-			,	py = this.y;
-		
-		this.hue += opts.runHueAdder;
-	
-		this.x += this.vx *= opts.xFriction;
-		this.y += this.vy += opts.gravity;
-		
-		webgl.data.push(
-			px, py, ph, opts.projectileAlpha * .2,
-			this.x, this.y, this.hue, opts.projectileAlpha * .2 );
-		
-		if( this.vy >= opts.lowVelBoundary ){
-			this.mode = 1;
-
-			this.shardAmount = opts.baseShardsParFirework + opts.addedShardsParFirework * Math.random() | 0;
-
-			var baseAngle = Math.random() * tau
-				,	x = Math.cos( baseAngle )
-				,	y = Math.sin( baseAngle )
-				,	sin = sins[ this.shardAmount ]
-				,	cos = coss[ this.shardAmount ];
-
-			for( var i = 0; i < this.shardAmount; ++i ){
-
-				var vel = opts.baseShardVel + opts.addedShardVel * Math.random();
-				this.shards[ i ].reset( x * vel, y * vel )
-				var X = x;
-				x = x * cos - y * sin;
-				y = y * cos + X * sin;
-			}
-		}
-
-	} else if( this.mode === 1 ) {
-		
-		this.ph = this.hue
-		this.hue += opts.runHueAdder;
-		
-		var allDead = true;
-		for( var i = 0; i < this.shardAmount; ++i ){
-			var shard = this.shards[ i ];
-			if( !shard.dead ){
-				shard.step();
-				allDead = false;
-			}
-		}
-		
-		if( allDead )
-			this.reset();
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #111;
 	}
 	
-}
-function Shard( parent ){
-	this.parent = parent;
-}
-Shard.prototype.reset = function( vx, vy ){
-	this.x = this.parent.x;
-	this.y = this.parent.y;
-	this.vx = this.parent.vx * opts.shardFireworkVelMultiplier + vx;
-	this.vy = this.parent.vy * opts.shardFireworkVelMultiplier + vy;
-	this.starty = this.y;
-	this.dead = false;
-	this.tick = 1;
-}
-Shard.prototype.step = function(){
+	.logo-container {
+		background: white;
+		padding: 4px;
+		border-radius: 100%;
+		display: inline-block;
+		width: 160px;
+		height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
 	
-	this.tick += .05;
+	.logo {
+		max-width: 100%;
+		height: 120px;
+		width: 130px;
+		margin-top: 0 !important;
+	}
+	</style><body>
+	<!--welcom audio-->
+	<!--
+	 <script>
+	  function play(){
+		   var audio = document.getElementById("audio");
+		   audio.play();
+					 }
+	   </script>
+	-->
 	
-	var px = this.x
-		,	py = this.y;
+	<!--<audio id="audio" src="mhpfinal.mp3" ></audio>-->
 	
-	this.x += this.vx *= opts.xFriction;
-	this.y += this.vy += opts.gravity;
 	
-	var proportion = 1 - ( this.y - this.starty ) / ( h - this.starty );
-	
-	webgl.data.push(
-		px, py, this.parent.ph, opts.projectileAlpha / this.tick,
-		this.x, this.y, this.parent.hue, opts.projectileAlpha / this.tick );
-	
-	if( this.y > h )
-		this.dead = true;
-}
+		<canvas id=c></canvas>
+	<div class="bgimg">  
+		<div class="middle"><div class="logo-container"><img src="/logo.png" class="logo" title="mssc"></div><h3 title="mssc" style="color: #C69E51;"><strong>E-Service Sheet Nandurbar Police</strong></h3><hr><br><h4 style="color: #fff; font-size: 40px;">Official Launch</h4><br>
 
-function anim(){
+	<div style="display: flex; justify-content: center; gap: 20px;">
+		<a href="https://nandurbar.mahapolice.gov.in/eservice/admin/login" class="btn btn-lg" role="button" aria-pressed="true" style="background:#2196F3;color: #fff; padding: 10px 40px;" target="_blank">ADMIN LOGIN</a>
+		<a href="https://nandurbar.mahapolice.gov.in/eservice/officer" class="btn btn-lg" role="button" aria-pressed="true" style="background:#ff5722;color: #fff; padding: 10px 40px;" target="_blank">USER LOGIN</a>
+	</div>
+	<div style="color: #fff; text-align: center; margin-bottom: 30px;">
+		<p style="font-size: 24px; margin-bottom: 10px;">Date: 15/07/2025</p>
+		<p style="font-size: 24px; margin-bottom: 20px;">In the Presence of:</p>
+		<p style="font-size: 28px; color: #C69E51; font-weight: bold;">Hon'ble Shri. Dattatray Karale (IPS)</p>
+		<p style="font-size: 24px;">Spl. Inspector General of Police, Nashik Range.</p>
+	</div>
+	</div>
+			
+	  
+			
+			
+		<!-- <div id="countdown"><div class="countdown-section"><span class="h1 days"></span><div class="text-center">DAYS</div></div><div class="countdown-section"><span class="h1 hours"></span><div class="text-center">HRS</div></div><div class="countdown-section"><span class="h1 minutes"></span><div class="text-center">MINS</div></div><div class="countdown-section"><span class="h1 seconds"></span><div class="text-center">SECS</div></div></div><br> -->
+	</div><canvas id="canvas"></canvas><br>
+	<script>function getTimeRemaining(e){var n=Date.parse(e)-Date.parse(new Date),t=Math.floor(n/1e3%60),r=Math.floor(n/1e3/60%60),a=Math.floor(n/36e5%24),i=Math.floor(n/864e5);return{total:n,days:i,hours:a,minutes:r,seconds:t}}function initializeClock(e,n){function t(){var e=getTimeRemaining(n);a.innerHTML=e.days,i.innerHTML=("0"+e.hours).slice(-2),o.innerHTML=("0"+e.minutes).slice(-2),l.innerHTML=("0"+e.seconds).slice(-2),e.total<=0&&clearInterval(s)}var r=document.getElementById(e),a=r.querySelector(".days"),i=r.querySelector(".hours"),o=r.querySelector(".minutes"),l=r.querySelector(".seconds");t();var s=setInterval(t,1e3)}var deadline="January 2 2018 02:00:00 UTC";initializeClock("countdown",deadline);</script><script>var ballons_left=25,ballons_right=25;colors=["#f44336","#e91e63","#9c27b0","#673ab7","#3f51b5","#2196f3","#03a9f4","#00bcd4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFEB3B","#FFC107","#FF9800","#FF5722"],colors2=["#f44336","#e91e63","#9c27b0","#673ab7","#3f51b5","#2196f3","#03a9f4","#00bcd4","#009688","#4CAF50","#8BC34A","#CDDC39","#FFEB3B","#FFC107","#FF9800","#FF5722"];function handleClick(cb){debug=cb.checked;}var mouse={x:0,y:0};canvas.addEventListener("mousemove",function(n){mouse.x=n.pageX-this.offsetLeft,mouse.y=n.pageY-this.offsetTop},!1);var utils={randomInt:function(n,o){return Math.floor(n+Math.random()*(o-n+1))},randomRange:function(n,o){return n+Math.random()*(o-n+1)}};function randomForce(s){this.goal=0,this.value=s,this.sens=null,this.calculerLeSens=function(){this.value<this.goal&&(this.sens="+"),this.value>this.goal&&(this.sens="-")},this.display=function(s,t,i){ctx.fillStyle="silver",ctx.textAlign="left",ctx.font="20px arial"},this.update=function(){null===this.sens?this.calculerLeSens():"+"===this.sens?(this.value+=.005,this.value>this.goal&&(this.goal=utils.randomRange(-10,10)/50,this.sens=null)):"-"===this.sens&&(this.value-=.005,this.value<this.goal&&(this.goal=utils.randomRange(-10,10)/50,this.sens=null))}}function distance(t,i){var n=i.x-t.x,s=i.y-t.y;return Math.sqrt(n*n+s*s)}function point(t,i){this.x=t,this.y=i,this.oldx=t,this.oldy=i}function verlet(t,i){this.x=t,this.y=i,this.points=[],this.sticks=[],this.bounce=.9,this.gravity=.9,this.wind=3,this.antig=!1,this.friction=.95,this.addPoint=function(t,i){this.points.push(new point(t+this.x,i+this.y))},this.renderPoints=function(){for(var t=0;t<this.points.length;t++){var i=this.points[t];ctx.beginPath(),ctx.arc(i.x,i.y,3,0,2*Math.PI),ctx.fill(),ctx.stroke()}},this.renderSticks=function(){ctx.beginPath();for(var t=0;t<this.sticks.length;t++){var i=this.sticks[t];ctx.moveTo(i.p0.x,i.p0.y),ctx.lineTo(i.p1.x,i.p1.y)}ctx.stroke()},this.updatePoints=function(){for(var t=0;t<this.points.length;t++){var i=this.points[t],n=(i.x-i.oldx)*this.friction;vy=(i.y-i.oldy)*this.friction,i.pinned||(i.oldx=i.x,i.oldy=i.y,i.x+=n,i.y+=vy,i.antig?i.y-=this.gravity*i.antig[1]:i.y+=this.gravity,i.x+=wind.value,n=(i.x-i.oldx)*this.friction,vy=(i.y-i.oldy)*this.friction,i.x>W?(i.x=W,i.oldx=i.x+n*this.bounce):i.x<0&&(i.x=0),i.y>H?i.y=H:i.y<0&&(i.y=0))}},this.updateSticks=function(){for(var t=0;t<this.sticks.length;t++){var i=this.sticks[t],n=i.p1.x-i.p0.x,s=i.p1.y-i.p0.y,h=Math.sqrt(n*n+s*s),o=i.length-h,c=o/h/1.5,e=n*c,a=s*c;i.p0.pinned||(i.p0.x-=e,i.p0.y-=a),i.p1.pinned||(i.p1.x+=e,i.p1.y+=a)}}}wind=new randomForce(.1),canvas=document.getElementById("canvas");var ctx=canvas.getContext("2d");W=canvas.width=window.screen.width,H=canvas.height=window.screen.height;verlet.prototype.calcul=function(){this.updatePoints();for(var t=0;12>t;t++)this.updateSticks()},verlet.prototype.draw=function(){this.renderSticks(),this.renderPoints()};function corde(x,y,[longueur,ecart]) {this.color=colors[utils.randomInt(0,colors.length-1)];this.body=new verlet(x, y);this.points=[];this.width=5;this.longueur=longueur;for(var i=0;i<longueur;i++){this.body.addPoint(0,i*ecart);}this.body.points[0].pinned=true;for(l=0;l<longueur-1;l++) {this.body.sticks.push({p0:this.body.points[0 + l],p1: this.body.points[1+l],length:distance(this.body.points[0 + l], this.body.points[1+l])});}this.body.points[this.body.points.length - 1].antig=[true,this.longueur];this.getPoints=function(){this.points=this.body.points;};}var debug=false;corde.prototype.draw=function(){for(this.body.calcul(),this.getPoints(),ctx.lineWidth=1,ctx.strokeStyle="silver",ctx.fillStyle=this.color,ctx.lineCap="round",ctx.beginPath(),ctx.moveTo(this.points[0].x,this.points[0].y),s=1;s<this.longueur-2;s++){var t=(this.points[s].x+this.points[s+1].x)/2,i=(this.points[s].y+this.points[s+1].y)/2;ctx.quadraticCurveTo(this.points[s].x,this.points[s].y,t,i)}if(ctx.quadraticCurveTo(this.points[s].x,this.points[s].y,this.points[s+1].x,this.points[s+1].y),ctx.stroke(),ctx.globalAlpha=.9,ctx.beginPath(),ctx.arc(this.points[this.points.length-1].x,this.points[this.points.length-1].y,30,0,2*Math.PI),ctx.fill(),ctx.closePath(),ctx.globalAlpha=1,debug){for(ctx.lineWidth=1,ctx.strokeStyle="#222",ctx.beginPath(),ctx.moveTo(this.points[0].x,this.points[0].y),s=1;s<this.longueur-1;s++)ctx.lineTo(this.points[s].x,this.points[s].y);ctx.lineTo(this.points[s].x,this.points[s].y),ctx.stroke(),ctx.fillStyle="silver";for(var s=0;s<this.longueur;s++)ctx.beginPath(),ctx.arc(this.points[s].x,this.points[s].y,1,0,2*Math.PI),ctx.fill(),ctx.closePath();ctx.fillStyle="#222"}},stockCorde=[];function addBalloon(){stockCorde.push(new corde(W-150,H-50,[utils.randomInt(3,20),20]))}function deleteBalloon(){stockCorde.length>1&&stockCorde.splice(0,1)}function release(){for(var o=0;o<stockCorde.length;o++)stockCorde[o].body.points[0].pinned=!1}function followMouse(){followAll=followAll?!1:!0}function update(){ctx.clearRect(0,0,W,H);for(var o=0;o<stockCorde.length;o++){stockCorde[o].draw();for(var t=stockCorde[o],s=o+1;s<stockCorde.length;s++){var d=stockCorde[s];collision(t,d)}}if(mouse.x)if(followAll)for(var n=0;n<stockCorde.length;n++)stockCorde[n].body.points[0].x=mouse.x,stockCorde[n].body.points[0].y=mouse.y;else stockCorde[0].body.points[0].x=mouse.x,stockCorde[0].body.points[0].y=mouse.y;wind.update(),wind.display(30,30,"wind"),requestAnimationFrame(update)}for(var i=0;i<ballons_left;i++)stockCorde.push(new corde(W-150,H-50,[utils.randomInt(5,20),20]));for(var i=0;i<ballons_right;i++)stockCorde.push(new corde(150,H-50,[utils.randomInt(5,20),20]));var followAll=!1;this.collision=function(o,s){var d,n=o.body.points[o.body.points.length-1].x-s.body.points[s.body.points.length-1].x;dy=o.body.points[o.body.points.length-1].y-s.body.points[s.body.points.length-1].y,d=Math.sqrt(n*n+dy*dy),o.radius=30,s.radius=30,l=o.radius+s.radius,d<l&&(f=(1-d/l)*this.radius*2,t=Math.atan2(dy,n),s.body.points[s.body.points.length-1].oldx+=1*Math.cos(t),s.body.points[s.body.points.length-1].oldy+=1*Math.sin(t))},update();
 	
-	window.requestAnimationFrame( anim )
 	
-	webgl.clear();
+	// 
 	
-	++tick;
+	var gl = c.getContext( 'webgl', { preserveDrawingBuffer: true } )
+		,	w = c.width = window.innerWidth
+		,	h = c.height = window.innerHeight
 	
-	if( fireworks.length < opts.fireworks )
-		fireworks.push( new Firework );
+		,	webgl = {}
+		,	opts = {
+			projectileAlpha: .8,
+			projectileLineWidth: 1.3,
+			fireworkAngleSpan: .5,
+			baseFireworkVel: 3,
+			addedFireworkVel: 3,
+			gravity: .03,
+			lowVelBoundary: -.2,
+			xFriction: .995,
+			baseShardVel: 1,
+			addedShardVel: .2,
+			fireworks: 1000,
+			baseShardsParFirework: 10,
+			addedShardsParFirework: 10,
+			shardFireworkVelMultiplier: .3,
+			initHueMultiplier: 1/360,
+			runHueAdder: .1/360
+		}
 	
-	fireworks.map( function( firework ){ firework.step(); } );
+	webgl.vertexShaderSource = `
+	uniform int u_mode;
+	uniform vec2 u_res;
+	attribute vec4 a_data;
+	varying vec4 v_color;
 	
-	webgl.draw( gl.LINES );
-}
-anim();
-
-window.addEventListener( 'resize', function(){
+	vec3 h2rgb( float h ){
+		return clamp( abs( mod( h * 6. + vec3( 0, 4, 2 ), 6. ) - 3. ) -1., 0., 1. );
+	}
+	void clear(){
+		gl_Position = vec4( a_data.xy, 0, 1 );
+		v_color = vec4( 0, 0, 0, a_data.w );
+	}
+	void draw(){
+		gl_Position = vec4( vec2( 1, -1 ) * ( ( a_data.xy / u_res ) * 2. - 1. ), 0, 1 );
+		v_color = vec4( h2rgb( a_data.z ), a_data.w );
+	}
+	void main(){
+		if( u_mode == 0 )
+			draw();
+		else
+			clear();
+	}
+	`;
+	webgl.fragmentShaderSource = `
+	precision mediump float;
+	varying vec4 v_color;
 	
-	w = c.width = window.innerWidth;
-	h = c.height = window.innerHeight;
+	void main(){
+		gl_FragColor = v_color;
+	}
+	`;
+	
+	webgl.vertexShader = gl.createShader( gl.VERTEX_SHADER );
+	gl.shaderSource( webgl.vertexShader, webgl.vertexShaderSource );
+	gl.compileShader( webgl.vertexShader );
+	
+	webgl.fragmentShader = gl.createShader( gl.FRAGMENT_SHADER );
+	gl.shaderSource( webgl.fragmentShader, webgl.fragmentShaderSource );
+	gl.compileShader( webgl.fragmentShader );
+	
+	webgl.shaderProgram = gl.createProgram();
+	gl.attachShader( webgl.shaderProgram, webgl.vertexShader );
+	gl.attachShader( webgl.shaderProgram, webgl.fragmentShader );
+	
+	gl.linkProgram( webgl.shaderProgram );
+	gl.useProgram( webgl.shaderProgram );
+	
+	webgl.dataAttribLoc = gl.getAttribLocation( webgl.shaderProgram, 'a_data' );
+	webgl.dataBuffer = gl.createBuffer();
+	
+	gl.enableVertexAttribArray( webgl.dataAttribLoc );
+	gl.bindBuffer( gl.ARRAY_BUFFER, webgl.dataBuffer );
+	gl.vertexAttribPointer( webgl.dataAttribLoc, 4, gl.FLOAT, false, 0, 0 );
+	
+	webgl.resUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_res' );
+	webgl.modeUniformLoc = gl.getUniformLocation( webgl.shaderProgram, 'u_mode' );
 	
 	gl.viewport( 0, 0, w, h );
 	gl.uniform2f( webgl.resUniformLoc, w, h );
-})
-window.addEventListener( 'click', function( e ){
-	var firework = new Firework();
-	firework.x = e.clientX;
-	firework.y = e.clientY;
-	firework.vx = 0;
-	firework.vy = 0;
-	fireworks.push( firework );
-});
-</script></body></html>
-<!-- Developed By: Dreamcare Developers | url: dreamcaredevelopers.com -->
+	
+	gl.blendFunc( gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA );
+	gl.enable( gl.BLEND );
+	
+	gl.lineWidth( opts.projectileLineWidth );
+	
+	webgl.data = [];
+	
+	webgl.clear = function(){
+		
+		gl.uniform1i( webgl.modeUniformLoc, 1 );
+		var a = .1;
+		webgl.data = [
+			-1, -1, 0, a,
+			 1, -1, 0, a,
+			-1,  1, 0, a,
+			-1,  1, 0, a,
+			 1, -1, 0, a,
+			 1,  1, 0, a
+		];
+		webgl.draw( gl.TRIANGLES );
+		gl.uniform1i( webgl.modeUniformLoc, 0 );
+		webgl.data.length = 0;
+	}
+	webgl.draw = function( glType ){
+		
+		gl.bufferData( gl.ARRAY_BUFFER, new Float32Array( webgl.data ), gl.STATIC_DRAW );
+		gl.drawArrays( glType, 0, webgl.data.length / 4 );
+	}
+	
+	var	fireworks = []
+		,	tick = 0
+		,	sins = []
+		,	coss = []
+		,	maxShardsParFirework = opts.baseShardsParFirework + opts.addedShardsParFirework
+		,	tau = 6.283185307179586476925286766559;
+	
+	for( var i = 0; i < maxShardsParFirework; ++i ){
+		sins[ i ] = Math.sin( tau * i / maxShardsParFirework );
+		coss[ i ] = Math.cos( tau * i / maxShardsParFirework );
+	}
+	
+	function Firework(){
+		this.reset();
+		this.shards = [];
+		for( var i = 0; i < maxShardsParFirework; ++i )
+			this.shards.push( new Shard( this ) );
+	}
+	Firework.prototype.reset = function(){
+		
+		var angle = -Math.PI / 2 + ( Math.random() - .5 )* opts.fireworkAngleSpan
+			,	vel = opts.baseFireworkVel + opts.addedFireworkVel * Math.random();
+		
+		this.mode = 0;
+		this.vx = vel * Math.cos( angle );
+		this.vy = vel * Math.sin( angle );
+		
+		this.x = Math.random() * w;
+		this.y = h;
+		
+		this.hue = tick * opts.initHueMultiplier;
+		
+	}
+	Firework.prototype.step = function(){
+		
+		if( this.mode === 0 ){
+			
+			var ph = this.hue
+				,	px = this.x
+				,	py = this.y;
+			
+			this.hue += opts.runHueAdder;
+		
+			this.x += this.vx *= opts.xFriction;
+			this.y += this.vy += opts.gravity;
+			
+			webgl.data.push(
+				px, py, ph, opts.projectileAlpha * .2,
+				this.x, this.y, this.hue, opts.projectileAlpha * .2 );
+			
+			if( this.vy >= opts.lowVelBoundary ){
+				this.mode = 1;
+	
+				this.shardAmount = opts.baseShardsParFirework + opts.addedShardsParFirework * Math.random() | 0;
+	
+				var baseAngle = Math.random() * tau
+					,	x = Math.cos( baseAngle )
+					,	y = Math.sin( baseAngle )
+					,	sin = sins[ this.shardAmount ]
+					,	cos = coss[ this.shardAmount ];
+	
+				for( var i = 0; i < this.shardAmount; ++i ){
+	
+					var vel = opts.baseShardVel + opts.addedShardVel * Math.random();
+					this.shards[ i ].reset( x * vel, y * vel )
+					var X = x;
+					x = x * cos - y * sin;
+					y = y * cos + X * sin;
+				}
+			}
+	
+		} else if( this.mode === 1 ) {
+			
+			this.ph = this.hue
+			this.hue += opts.runHueAdder;
+			
+			var allDead = true;
+			for( var i = 0; i < this.shardAmount; ++i ){
+				var shard = this.shards[ i ];
+				if( !shard.dead ){
+					shard.step();
+					allDead = false;
+				}
+			}
+			
+			if( allDead )
+				this.reset();
+		}
+		
+	}
+	function Shard( parent ){
+		this.parent = parent;
+	}
+	Shard.prototype.reset = function( vx, vy ){
+		this.x = this.parent.x;
+		this.y = this.parent.y;
+		this.vx = this.parent.vx * opts.shardFireworkVelMultiplier + vx;
+		this.vy = this.parent.vy * opts.shardFireworkVelMultiplier + vy;
+		this.starty = this.y;
+		this.dead = false;
+		this.tick = 1;
+	}
+	Shard.prototype.step = function(){
+		
+		this.tick += .05;
+		
+		var px = this.x
+			,	py = this.y;
+		
+		this.x += this.vx *= opts.xFriction;
+		this.y += this.vy += opts.gravity;
+		
+		var proportion = 1 - ( this.y - this.starty ) / ( h - this.starty );
+		
+		webgl.data.push(
+			px, py, this.parent.ph, opts.projectileAlpha / this.tick,
+			this.x, this.y, this.parent.hue, opts.projectileAlpha / this.tick );
+		
+		if( this.y > h )
+			this.dead = true;
+	}
+	
+	function anim(){
+		
+		window.requestAnimationFrame( anim )
+		
+		webgl.clear();
+		
+		++tick;
+		
+		if( fireworks.length < opts.fireworks )
+			fireworks.push( new Firework );
+		
+		fireworks.map( function( firework ){ firework.step(); } );
+		
+		webgl.draw( gl.LINES );
+	}
+	anim();
+	
+	window.addEventListener( 'resize', function(){
+		
+		w = c.width = window.innerWidth;
+		h = c.height = window.innerHeight;
+		
+		gl.viewport( 0, 0, w, h );
+		gl.uniform2f( webgl.resUniformLoc, w, h );
+	})
+	window.addEventListener( 'click', function( e ){
+		var firework = new Firework();
+		firework.x = e.clientX;
+		firework.y = e.clientY;
+		firework.vx = 0;
+		firework.vy = 0;
+		fireworks.push( firework );
+	});
+	</script></body></html>
+	<!-- Developed By: Dreamcare Developers | url: dreamcaredevelopers.com -->
